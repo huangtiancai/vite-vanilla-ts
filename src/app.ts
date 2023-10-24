@@ -26,5 +26,5 @@ let result = "";
 console.log(reverseStringRecursion(str, pos, result));
 
 console.log(`输出次数最多的字符及出现的次数`);
-console.log(getMaxCount("javascript"));
-console.log(getMaxCountTwo("javascript"));
+console.log(getMaxCount("javascript 12444 2 8 9 10 4"));
+// console.log(getMaxCountTwo("javascript"));
