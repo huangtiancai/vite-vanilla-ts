@@ -61,3 +61,22 @@ export function getMaxCountTwo(str: string) {
 
   return "出现次数最多的字符为" + maxCountChar + "，出现的次数为" + maxCount;
 }
+
+export function getMaxCountThree(str: string) {
+  let maxCountChar = "";
+  let maxCount = 0;
+  str = str.split("").sort().join("");
+  let arr = str.match(/(\w)\1+/g);
+  console.log(arr);
+  // 非空断言，即确认 `arr` 不为 `null` 或 `undefined`
+  for (let i = 0; i < arr!.length; i++) {
+    let length = arr![i].length;
+    console.log(length);
+    if (length > maxCount) {
+      maxCount = length;
+      maxCountChar = arr![i][0];
+    }
+  }
+
+  return "出现次数最多的字符为" + maxCountChar + "，出现的次数为" + maxCount;
+}

@@ -6,7 +6,16 @@ import {
   reverseStringCall,
 } from "./special/rerverseString";
 
-import { getMaxCount, getMaxCountTwo } from "./special/maxCountString";
+import {
+  getMaxCount,
+  getMaxCountTwo,
+  getMaxCountThree,
+} from "./special/maxCountString";
+
+import {
+  removeDuplicateChar,
+  removeDuplicateCharTwo,
+} from "./special/removeDuplicateChar.ts";
 
 // 浮点数计算精度问题
 // const res = _toFixed(1239.7686, 2, true, true);
@@ -25,6 +34,11 @@ let pos = str.length - 1;
 let result = "";
 console.log(reverseStringRecursion(str, pos, result));
 
-console.log(`输出次数最多的字符及出现的次数`);
-console.log(getMaxCount("javascript 12444 2 8 9 10 4"));
-// console.log(getMaxCountTwo("javascript"));
+// 输出次数最多的字符及出现的次数;
+console.log(getMaxCount("javascript"));
+console.log(getMaxCountTwo("javascript"));
+console.log(getMaxCountThree("javascript"));
+
+// 字符串去重
+console.log(removeDuplicateChar("hellojavascript"));
+console.log(removeDuplicateCharTwo("hellojavascript"));
